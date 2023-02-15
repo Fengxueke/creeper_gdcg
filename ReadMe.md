@@ -1,18 +1,18 @@
-##使用jsoup爬取广东省政府采购网的数据
-###使用方法
-#####1. 安装python和ddddocr， 用于验证码的识别
-#####2. 设置raw.data.url.operationStartTime，raw.data.url.operationEndTime和all.raw.data.path， 具体的设置请参考后面的说明
-#####3. 运行DownloadRowData.java开始爬取数据，并等待完成
-#####4. 运行HandleRawData.java开始解析爬取到的数据， 结果会保存到src/main/resources/result.csv
+## 使用jsoup爬取广东省政府采购网的数据
+### 使用方法
+##### 1. 安装python和ddddocr， 用于验证码的识别
+##### 2. 设置raw.data.url.operationStartTime，raw.data.url.operationEndTime和all.raw.data.path， 具体的设置请参考后面的说明
+##### 3. 运行DownloadRowData.java开始爬取数据，并等待完成
+##### 4. 运行HandleRawData.java开始解析爬取到的数据， 结果会保存到src/main/resources/result.csv
 
-###说明
-####DownloadRowData.java
+### 说明
+#### DownloadRowData.java
 用于爬取数据
 
-####HandleRawData.java
+#### HandleRawData.java
 用于处理爬取的数据，并输出为csv表格
 
-####app.properties
+#### app.properties
 配置文件，具体如下
 
 * index.url，采购页面主页， 主要用来获取cookie
@@ -28,7 +28,7 @@
 * gd.mapping.file，广东省的行政区划关系
 * details.url，公告结果链接的开头部分
 
-####result.csv
+#### result.csv
 关于输出的结果文件， 文件内容分为基本数据（一条公告）和基本数据中包含的表格数据（多个）\
 即一条公告链接，包含多个表格，这是一对多的关系\
 为了方便，我把公告的基本信息的字段，和其中包含的多个表格的字段放到了同一行里面，\
